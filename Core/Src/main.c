@@ -9,15 +9,22 @@
 #include "UART.h"
 #include "demo.h"
 
+#include <stdio.h>
+
 	
+
+
 int main(void){
 
-	// initialization code
+//	// initialization code
 	System_Clock_Init(); // set System Clock = 80 MHz
 	LED_Init();
 	UART2_Init();
+//
+	hello();
+
+//	// application run function
+//	run_demo() ;
 	
-	// application run function
-	run_demo() ;
 }
 

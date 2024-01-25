@@ -1,3 +1,4 @@
+"./Core/Inc/Activities/hello_world.o"
 "./Core/Src/Demos/adc_dac_demo.o"
 "./Core/Src/Demos/demo.o"
 "./Core/Src/Devices/GPIO.o"
