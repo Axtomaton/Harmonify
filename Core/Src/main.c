@@ -8,7 +8,7 @@
 #include "LED.h"
 #include "UART.h"
 #include "demo.h"
-
+#include "project.h"
 #include <stdio.h>
 
 	
@@ -20,8 +20,9 @@ int main(void){
 	System_Clock_Init(); // set System Clock = 80 MHz
 	LED_Init();
 	UART2_Init();
-//
-	hello();
+	run_project();
+//	hello();
+
 
 //	// application run function
 //	run_demo() ;

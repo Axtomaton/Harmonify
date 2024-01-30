@@ -25,6 +25,7 @@ SUBDIRS := \
 Core/Inc/Activities \
 Core/Src/Demos \
 Core/Src/Devices \
+Core/Src/Homework \
 Core/Src/Project \
 Core/Src/System \
 Core/Src \

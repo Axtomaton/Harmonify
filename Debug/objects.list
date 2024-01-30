@@ -6,6 +6,7 @@
 "./Core/Src/Devices/UART.o"
 "./Core/Src/Devices/adc.o"
 "./Core/Src/Devices/dac.o"
+"./Core/Src/Homework/printf.o"
 "./Core/Src/Project/project.o"
 "./Core/Src/Project/song.o"
 "./Core/Src/Project/tone.o"

@@ -8,6 +8,6 @@
 #ifndef INC_PROJECT_H_
 #define INC_PROJECT_H_
 
-void run_project ();
+void run_project();
 
 #endif /* INC_PROJECT_H_ */
