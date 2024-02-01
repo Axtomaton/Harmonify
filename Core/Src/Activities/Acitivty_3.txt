@@ -1,0 +1,9 @@
+unsigned char q3 = 0b 1101 0110 = 2^7*1 + 2^6*1 + 2^5*0 + 2^4*1 + 2^3*0 + 2^2*1 + 2^1*1 + 2^0*0
+q3 = 128 + 64 + 0 + 16 + 0 + 4 + 2 + 0 = 214
+decimal number:0xD6
+ 111
+ 0101
++0011
+------ 1+1 is 10 in binary. Can't go over size of data structure. If we do, we just lose it. 
+ 1000
+
