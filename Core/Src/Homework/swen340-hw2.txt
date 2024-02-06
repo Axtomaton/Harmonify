@@ -1,0 +1,92 @@
+SWEN-340: Data Representation - Homework 2
+
+
+Instructions:
+    1. Assume all values are stored in the smallest variable size necessary for
+       the value to fit. 
+       (I.E. 8 bit values are stored in a char and 16 bit values are stored in a short).
+       (Signed value uses 2's complement format).
+    2. Provide hexadecimal values in 0x... format (C language format)
+    3. Edit this text file and record your answer.
+    4. Also for every answer show the manual steps required to arrive at you answer by editing this text file.
+    5. Submit your edited text file to the MyCourses assignment folder "Homework 1".
+       All submissions MUST be text files.
+    6. All questions are worth one point
+
+
+Questions:
+    1. Convert decimal 95 to hexadecimal.
+       Answer: 0x5F
+       Reasoning: 
+       95 / 2 = 47 r 1 -> 1
+       47 / 2 = 23 r 1 -> 11
+       23 / 2 = 11 r 1 -> 111
+       11 / 2 =  5 r 1 -> 1111
+        5 / 2 =  2 r 1 -> 1 1111 
+        2 / 2 =  1 r 0 -> 01 1111 
+        1 / 2 =  0 r 1 -> 101 1111 
+      = 0101 1111 -> 0101 in hexadecimal is 5, 1111 is F. So our answer is 0x5F.
+
+            
+           
+    2. Convert 0x1CD to unsigned decimal. (Hint: Convert it to binary first!)
+       Answer: 461
+       Reasoning: 
+       1: 0001, 2: 0010, 3: 0011, 4: 0100, 5: 0101, 6:
+       1 -> 0xb0001
+       C -> 0xb1100 
+       D -> 0xb1101 
+
+       000111001101
+       = (1*2^8) + (1*2^7) + (1*2^6) + (0*2^5) + (0*2^4) + (1*2^3) + (1*2^2) + (0*2^1) + (1*2^0)
+       = 256 + 128 + 64 + 0 + 0 + 8 + 4 + 0 + 1 = 461
+      
+    3. What is the value of binary 10101011 in decimal if this is a negative number?
+	   Decimal Answer:  
+	   Reasoning: -85
+         Reverse: 01010100
+         Add a 1 to the end: 01010101 
+         = (0*2^7) + (1*2^6) + (0*2^5) + (1*2^4) + (0*2^3) + (1*2^2) + (0*2^1) + (1*2^0)
+         = 0 + 64 + 0 + 16 + 0 + 4 +0 + 1
+         = 85. Since this is a negative number the answer is -85. 
+	   
+    4. What is the value of binary 111001111 in decimal if this is an unsigned number?
+       Decimal Answer:
+	   Reasoning: 463
+         = (1*2^8) + (1*2^7) + (1*2^6) + (0*2^5) + (0*2^4) + (1*2^3) + (1*2^2) = (1*2^1) + (1*2^0)
+         = 256 + 128 + 64 + 0 + 0 + 8 + 4 + 2 + 1
+         = 463
+      
+    5. Add 0x8BCD and 0x02E6 (assume unsigned numbers):
+       Hexadecimal Answer: 
+       Reasoning: 0x8EB3
+         Hexadecimals: 1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+          11
+         8BCD
+      +  02E6
+      -------- 
+         8EB3   
+      1. D + 6 = 13 + 6 = 19 -> 1x16 + 3
+      2. C + E + 1 = 12 + 14 + 1 = 27 -> 1x16 + 11 (which is B)
+      3. B + 2 + 1 = 11 + 2 + 1 = 14 -> E
+      4. Answer is 0x8EB3
+	   
+    6. Add 8 bit binary integers 10101111 and 11011011
+       Hexadecimal Answer:
+       Reasoning:
+          1111111
+          10101111
+         +11011011
+         ---------
+         110001010 
+
+         110001010 -> 0001 1000 1010 = 0x18A
+
+
+    7.	How many bits are in each of the following data types?
+		
+		a. Byte			Answer:8
+		b. Short 		Answer:16
+		c. Int      	Answer:32
+		d. Long    		Answer:64
+		e. Nibble		Answer:4
