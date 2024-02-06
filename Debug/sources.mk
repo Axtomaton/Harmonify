@@ -22,7 +22,7 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Core/Inc/Activities \
+Core/Src/Activities \
 Core/Src/Demos \
 Core/Src/Devices \
 Core/Src/Homework \

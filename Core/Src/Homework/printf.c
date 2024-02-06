@@ -12,6 +12,13 @@ int puts (const char* str) {
     return ret;
 }
 
+int putns (const char* str, int n) {
+	int ret = sprintf (buffer, "%s\r\n", n, str);
+	USART_Write (USART2, (unsigned char*) buffer, ret);
+	USART_Write (USART2, (unsigned char*) "\r\n", 2);
+	return ret;
+}
+
 
 int putchar (int c) {
     USART_Write (USART2, (unsigned char*) &c, 1);

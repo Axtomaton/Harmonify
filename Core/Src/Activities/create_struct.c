@@ -8,26 +8,35 @@
 #include "song.h"
 #include "printf.h"
 
-//create a struct for the MIDI header
+/**
+Creating a struct for the MIDI header
+*/
 
-struct MIDI_Header{
-	char ChunkType [4];
-	unsigned int headerLength; //32 bit length
-	unsigned short format; //16 bits
-	unsigned short ntrks; //16 bits
-	unsigned short division; //bits
+#include "song.h"
+#include "printf.h"
 
+
+struct midi_header{
+    char chunkType[4]; // 4 ASCII characters
+    // unsigned takes less space
+    unsigned int length; // 32 bits
+    unsigned short format; // 16 bits
+    unsigned short ntrcks; // 16 bits
+    unsigned short division; // 16 bits
 };
 
-void user_header(){
-	unsigned char* song = get_song (0).p_song;
-	struct header* song_header = song; //casting the song to a header. Reinterpreting the information a diff way.
+void use_header(){
+//    struct header mheader;
+//    mheader.division = 256;
 
-	//print out all the pieces of the header, one per line.
+    unsigned char* song = get_song(0).p_song;
+    struct midi_header* song_header = (struct midi_header*)song;
+    // print out all the pieces of the header, one per line
+	putns (song_header->chunkType, 4);
+    printf("%s\n", song_header->chunkType);
+    printf("%d\n", song_header->length);
+    printf("%d\n", song_header->format);
+    printf("%d\n", song_header->ntrcks);
+    printf("%d\n", song_header->division);
 
-	vsprintf("ChunkType: %s\n", song_header->ChunkType);
-	
-
-
-	
 }

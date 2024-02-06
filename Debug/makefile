@@ -16,8 +16,8 @@ RM := rm -rf
 -include Core/Src/Homework/subdir.mk
 -include Core/Src/Devices/subdir.mk
 -include Core/Src/Demos/subdir.mk
+-include Core/Src/Activities/subdir.mk
 -include Core/Src/subdir.mk
--include Core/Inc/Activities/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

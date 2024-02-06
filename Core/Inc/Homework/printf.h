@@ -8,9 +8,8 @@
 #ifndef SRC_HOMEWORK_PRINTF_H_
 #define SRC_HOMEWORK_PRINTF_H_
 
-int do_printf(const char* format, ...);
-int puts(const char* str, ...);
+int printf(const char* format, ...);
 int putchar(int c);
-
+int puts (const char* str);
 
 #endif /* SRC_HOMEWORK_PRINTF_H_ */
