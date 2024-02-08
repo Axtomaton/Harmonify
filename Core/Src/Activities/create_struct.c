@@ -8,14 +8,8 @@
 #include "song.h"
 #include "printf.h"
 
-/**
-Creating a struct for the MIDI header
-*/
 
-#include "song.h"
-#include "printf.h"
-
-
+#include <stdint.h>
 struct midi_header{
     char chunkType[4]; // 4 ASCII characters
     // unsigned takes less space
