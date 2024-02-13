@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/Homework/hw4.c \
 ../Core/Src/Homework/printf.c 
 
 OBJS += \
+./Core/Src/Homework/hw4.o \
 ./Core/Src/Homework/printf.o 
 
 C_DEPS += \
+./Core/Src/Homework/hw4.d \
 ./Core/Src/Homework/printf.d 
 
 
@@ -21,7 +24,7 @@ Core/Src/Homework/%.o Core/Src/Homework/%.su Core/Src/Homework/%.cyclo: ../Core/
 clean: clean-Core-2f-Src-2f-Homework
 
 clean-Core-2f-Src-2f-Homework:
-	-$(RM) ./Core/Src/Homework/printf.cyclo ./Core/Src/Homework/printf.d ./Core/Src/Homework/printf.o ./Core/Src/Homework/printf.su
+	-$(RM) ./Core/Src/Homework/hw4.cyclo ./Core/Src/Homework/hw4.d ./Core/Src/Homework/hw4.o ./Core/Src/Homework/hw4.su ./Core/Src/Homework/printf.cyclo ./Core/Src/Homework/printf.d ./Core/Src/Homework/printf.o ./Core/Src/Homework/printf.su
 
 .PHONY: clean-Core-2f-Src-2f-Homework
 

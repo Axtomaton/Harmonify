@@ -69,4 +69,4 @@ x = x ^ mask
 
 CSR = Used to control 
 RESERVED = UNDEFINED
-CLKSOURCE = Where do i get the counter for how often i look to how often i change. 
+CLKSOURCE = Where do i get the counter for how often i look to how often i change. w

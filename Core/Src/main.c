@@ -20,7 +20,8 @@ int main(void){
 	System_Clock_Init(); // set System Clock = 80 MHz
 	LED_Init();
 	UART2_Init();
-	run_project();
+//	run_project();
+	print_systick();
 
 	// use_header();
 //	hello();
