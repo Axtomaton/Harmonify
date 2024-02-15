@@ -11,7 +11,8 @@ Core/Src/main.o: ../Core/Src/main.c \
  /Users/ivanl/SWEN340/Core/Inc/Devices/LED.h \
  /Users/ivanl/SWEN340/Core/Inc/Devices/UART.h \
  /Users/ivanl/SWEN340/Core/Inc/Demos/demo.h \
- /Users/ivanl/SWEN340/Core/Inc/Project/project.h
+ /Users/ivanl/SWEN340/Core/Inc/Project/project.h \
+ /Users/ivanl/SWEN340/Core/Inc/Homework/printf.h
 /Users/ivanl/SWEN340/Core/Inc/System/error_handler.h:
 /Users/ivanl/SWEN340/Core/Inc/System/SysClock.h:
 ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:
@@ -25,3 +26,4 @@ Core/Src/main.o: ../Core/Src/main.c \
 /Users/ivanl/SWEN340/Core/Inc/Devices/UART.h:
 /Users/ivanl/SWEN340/Core/Inc/Demos/demo.h:
 /Users/ivanl/SWEN340/Core/Inc/Project/project.h:
+/Users/ivanl/SWEN340/Core/Inc/Homework/printf.h:

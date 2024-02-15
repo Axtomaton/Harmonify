@@ -1,0 +1,3 @@
+../Core/Src/Homework/bigToLittleEndian.c:28:10:convert_to_uint16	1
+../Core/Src/Homework/bigToLittleEndian.c:37:10:convert_to_uint32	1
+../Core/Src/Homework/bigToLittleEndian.c:45:6:display_song_info	1

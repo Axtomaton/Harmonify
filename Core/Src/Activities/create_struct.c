@@ -10,7 +10,7 @@
 
 
 #include <stdint.h>
-struct midi_header{
+struct header{
     char chunkType[4]; // 4 ASCII characters
     // unsigned takes less space
     unsigned int length; // 32 bits
@@ -19,18 +19,14 @@ struct midi_header{
     unsigned short division; // 16 bits
 };
 
-void use_header(){
-//    struct header mheader;
-//    mheader.division = 256;
+void use_header () {
+    unsigned char* song = get_song (0).p_song;
+    struct header* song_header = (struct header*)song;
 
-    unsigned char* song = get_song(0).p_song;
-    struct midi_header* song_header = (struct midi_header*)song;
     // print out all the pieces of the header, one per line
-	putns (song_header->chunkType, 4);
-    printf("%s\n", song_header->chunkType);
-    printf("%d\n", song_header->length);
-    printf("%d\n", song_header->format);
-    printf("%d\n", song_header->ntrcks);
-    printf("%d\n", song_header->division);
-
+    putns (song_header->chunkType, 4);
+    printf ("%d\n", song_header->length);
+    printf ("%d\n", song_header->format);
+    printf ("%d\n", song_header->ntrcks);
+    printf ("%d\n", song_header->division);
 }

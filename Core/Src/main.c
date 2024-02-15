@@ -9,9 +9,8 @@
 #include "UART.h"
 #include "demo.h"
 #include "project.h"
+#include "printf.h"
 #include <stdio.h>
-
-	
 
 
 int main(void){
@@ -20,8 +19,11 @@ int main(void){
 	System_Clock_Init(); // set System Clock = 80 MHz
 	LED_Init();
 	UART2_Init();
-//	run_project();
-	print_systick();
+	run_project();
+	
+//	printf("hello world\n");
+
+//	 print_systick();
 
 	// use_header();
 //	hello();
