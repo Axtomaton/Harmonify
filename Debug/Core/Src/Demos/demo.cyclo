@@ -1,3 +1,2 @@
 ../Core/Src/Demos/demo.c:31:13:demo_of_UART_print	1
-../Core/Src/Demos/demo.c:44:6:init	1
-../Core/Src/Demos/demo.c:49:6:run_demo	1
+../Core/Src/Demos/demo.c:45:6:run_demo	1

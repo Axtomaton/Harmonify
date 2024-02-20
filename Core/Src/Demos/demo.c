@@ -41,21 +41,16 @@ static void demo_of_UART_print(int counter){
 	LED_Toggle(LED_PIN);
 }
 
-void init() {
-    systick_instance = (struct systick *)init_systick();
-	// systick_instance->RVR = 2000000; //set the delay to 2 seconds
-}
 
 void run_demo(){
 	
 	int counter = 0;
-	init();
+    systick_instance = (struct systick *)init_systick();
 	// Run a loop to print counter value on UART port
 	while (1)
 	{
 		//demo_of_printf_scanf();
 		demo_of_UART_print(counter);
-		delay_systick();
 		LED_Toggle(LED_PIN);
 		counter++;
 	}
