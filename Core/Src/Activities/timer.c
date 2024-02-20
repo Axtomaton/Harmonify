@@ -37,3 +37,9 @@ void print_systick(){
     }
 
 }
+
+// static struct sys_tick* Systick = (struct sys_tick*) 0xE000E010;
+
+// void init_systick(){
+
+// }

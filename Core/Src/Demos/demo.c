@@ -15,15 +15,17 @@
 #include "UART.h"
 #include "demo.h"
 #include "stm32l4xx.h"
-
+#include "Systick.h"
 
 // This function is to create a delay by consuming CPU cycle on counter
-static void delay_loop( int value )
-{
-	// spin loop consuming CPU to spend time.
-	for (int i = 0; i < value; i++)
-		;
-}
+// static void delay_loop( int value )
+// {
+// 	// spin loop consuming CPU to spend time.
+// 	for (int i = 0; i < value; i++)
+// 		;
+// }
+
+static struct systick* systick_instance;
 
 // This function is to print counter on UART port and toggle LED
 static void demo_of_UART_print(int counter){
@@ -33,22 +35,28 @@ static void demo_of_UART_print(int counter){
 	n = sprintf((char *)buffer, "counter = %d\r\n", counter);
 	USART_Write(USART2, buffer, n);
 
-	delay_loop( 8000000 ) ;	// comment this out when you are ready to test delay_systick
-	// delay_systick() ;	// enable this when you are ready to test
-
+	// delay_loop( 8000000 ) ;	// comment this out when you are ready to test delay_systick
+	delay_systick();	// enable this when you are ready to test
 	// Toggle LED
-	LED_Toggle();
+	LED_Toggle(LED_PIN);
+}
+
+void init() {
+    systick_instance = (struct systick *)init_systick();
+	// systick_instance->RVR = 2000000; //set the delay to 2 seconds
 }
 
 void run_demo(){
 	
 	int counter = 0;
-	
+	init();
 	// Run a loop to print counter value on UART port
 	while (1)
 	{
 		//demo_of_printf_scanf();
 		demo_of_UART_print(counter);
+		delay_systick();
+		LED_Toggle(LED_PIN);
 		counter++;
 	}
 }

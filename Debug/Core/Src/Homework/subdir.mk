@@ -5,14 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/Homework/Systick.c \
 ../Core/Src/Homework/bigToLittleEndian.c \
 ../Core/Src/Homework/printf.c 
 
 OBJS += \
+./Core/Src/Homework/Systick.o \
 ./Core/Src/Homework/bigToLittleEndian.o \
 ./Core/Src/Homework/printf.o 
 
 C_DEPS += \
+./Core/Src/Homework/Systick.d \
 ./Core/Src/Homework/bigToLittleEndian.d \
 ./Core/Src/Homework/printf.d 
 
@@ -24,7 +27,7 @@ Core/Src/Homework/%.o Core/Src/Homework/%.su Core/Src/Homework/%.cyclo: ../Core/
 clean: clean-Core-2f-Src-2f-Homework
 
 clean-Core-2f-Src-2f-Homework:
-	-$(RM) ./Core/Src/Homework/bigToLittleEndian.cyclo ./Core/Src/Homework/bigToLittleEndian.d ./Core/Src/Homework/bigToLittleEndian.o ./Core/Src/Homework/bigToLittleEndian.su ./Core/Src/Homework/printf.cyclo ./Core/Src/Homework/printf.d ./Core/Src/Homework/printf.o ./Core/Src/Homework/printf.su
+	-$(RM) ./Core/Src/Homework/Systick.cyclo ./Core/Src/Homework/Systick.d ./Core/Src/Homework/Systick.o ./Core/Src/Homework/Systick.su ./Core/Src/Homework/bigToLittleEndian.cyclo ./Core/Src/Homework/bigToLittleEndian.d ./Core/Src/Homework/bigToLittleEndian.o ./Core/Src/Homework/bigToLittleEndian.su ./Core/Src/Homework/printf.cyclo ./Core/Src/Homework/printf.d ./Core/Src/Homework/printf.o ./Core/Src/Homework/printf.su
 
 .PHONY: clean-Core-2f-Src-2f-Homework
 

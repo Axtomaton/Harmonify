@@ -17,20 +17,16 @@ int main(void){
 
 //	// initialization code
 	System_Clock_Init(); // set System Clock = 80 MHz
-	LED_Init();
+	LED_Init(LED_PIN);
 	UART2_Init();
-	run_project();
+	// run_project();
 	
 //	printf("hello world\n");
-
 //	 print_systick();
-
 	// use_header();
 //	hello();
-
-
 //	// application run function
-//	run_demo() ;
+	run_demo();
 	
 }
 

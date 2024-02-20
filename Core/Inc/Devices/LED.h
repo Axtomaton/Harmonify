@@ -3,10 +3,12 @@
 
 #include "stm32l476xx.h"
 
-void LED_Init(void);
+#define LED_PIN 5
 
-void LED_Off(void);
-void LED_On(void);
-void LED_Toggle(void);
+void LED_Init(int pin);
+
+void LED_Off(int pin);
+void LED_On(int pin);
+void LED_Toggle(int pin);
 
 #endif /* __NUCLEO476_LED_H */
