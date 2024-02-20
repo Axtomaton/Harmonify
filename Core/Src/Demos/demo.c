@@ -38,7 +38,7 @@ static void demo_of_UART_print(int counter){
 	// delay_loop( 8000000 ) ;	// comment this out when you are ready to test delay_systick
 	delay_systick();	// enable this when you are ready to test
 	// Toggle LED
-	LED_Toggle(LED_PIN);
+	// LED_Toggle(LED_PIN);
 }
 
 
