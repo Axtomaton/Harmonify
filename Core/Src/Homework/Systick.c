@@ -22,7 +22,6 @@ struct systick * init_systick() {
     systick->CSR |= 1 << 2;    // Set the internal clock source
     systick->CSR |= 1;    // Enable the systick counter
     systick->RVR = 15999999;  // Set the reload value for 2 seconds delay
-
     return systick;
 }
 
