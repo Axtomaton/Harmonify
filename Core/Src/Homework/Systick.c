@@ -16,21 +16,21 @@ struct systick* systick = (struct systick*) 0xE000E010; // Systick base address
  * 
  * @return struct systick* 
  */
-struct systick * init_systick() {
+void init_systick() {
     // Initialize systick
-    systick->CSR &= ~(1 << 0); // Clear the CSR register
-    systick->CSR |= 1 << 2;    // Set the internal clock source
-    systick->CSR |= 1;    // Enable the systick counter
-    systick->RVR = 15999999;  // Set the reload value for 2 seconds delay
-    return systick;
+    systick->CSR = 0; // Clear the CSR register
+    systick->RVR = 7999999; //set the reload value to 7999999
+    systick->CSR = (1 << 2); // Enable the counter to internal clock
+    systick->CSR != 1; // Enable the counter
 }
 
 /**
  * @brief This function is to create a delay by consuming CPU cycle on counter
  */
 void delay_systick() {
-    // Wait until the count flag counts down to 0. 
-    while ((systick->CSR >> 16) == 0) { // Check the count flag bit to make sure the counter is not 1
-        // Wait
+
+    for (int count = 0; count < 10; count++){
+        while (!(systick->CSR & (1 << 16)));  //16 is the bit with count flag, and that with the csr to get that one bit
+            // Wait for the count flag to be set
     }
 }
