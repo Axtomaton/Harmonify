@@ -10,7 +10,7 @@ struct systick {
     uint32_t CALIB;
 };
 
-struct systick * init_systick();
+void init_systick();
 
 void delay_systick();
 

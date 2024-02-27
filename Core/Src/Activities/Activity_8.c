@@ -12,7 +12,7 @@
 static char BUFFER [80];
 
 char read_and_echo_byte(){
-    uint8_t byte = USART_Read(USART2);
+    uint8_t byte = USART_Read_Nonblocking(USART2); 
     putchar (byte);
     if (byte == '\r'){
         putchar('\n');
@@ -38,7 +38,6 @@ char readlines() {
     }
 
 }
-
 
 void read_bytes(){
     while (1){

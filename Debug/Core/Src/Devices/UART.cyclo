@@ -5,3 +5,4 @@
 ../Core/Src/Devices/UART.c:111:6:USART_Write	4
 ../Core/Src/Devices/UART.c:127:6:USART_Delay	2
 ../Core/Src/Devices/UART.c:132:6:USART_IRQHandler	8
+../Core/Src/Devices/UART.c:153:9:USART_Read_Nonblocking	2

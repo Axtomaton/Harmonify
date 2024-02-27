@@ -6,7 +6,6 @@
 #define LED_PIN 5
 
 void LED_Init(int pin);
-
 void LED_Off(int pin);
 void LED_On(int pin);
 void LED_Toggle(int pin);

@@ -7,6 +7,7 @@
 
 #include "project.h"
 #include "printf.h"
+#include "hw5.h"
 // #include "bigToLittleEndian.h"
 #include "demo.h"
 // #include "Systick.h"
@@ -25,9 +26,8 @@ void run_project() {
     // printf("Converted value in little endian (uint32_t): %08x\n", little_endian_uint32);
 	// display_song_info();
 
-    struct systick * systick = init_systick();
-
-
+    // struct systick * systick = init_systick();
+    test_LED();
 }
 
 //	puts("hello world");

@@ -14,6 +14,7 @@
 
 
 
+
 int main(void){
 
 //	// initialization code
@@ -21,14 +22,14 @@ int main(void){
 	LED_Init(LED_PIN);
 	UART2_Init();
 	run_project();
-	
-//	printf("hello world\n");
+
 //	 print_systick();
 	// use_header();
 //	hello();
-//	// application run function
+	// LED_Toggle(LED_PIN);
+	// LED_Off(LED_PIN);
 	// run_demo();
 	// read_bytes();
-	readlines();
+	// readlines();
 }
 

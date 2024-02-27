@@ -27,10 +27,19 @@ void init_systick() {
 /**
  * @brief This function is to create a delay by consuming CPU cycle on counter
  */
+// This fuction is to create delay using SysTick timer counter
 void delay_systick() {
-
-    for (int count = 0; count < 10; count++){
-        while (!(systick->CSR & (1 << 16)));  //16 is the bit with count flag, and that with the csr to get that one bit
-            // Wait for the count flag to be set
+    // Using the SysTick global structure pointer do the following:
+    // Create a for loop that loops 10 times
+    for (int i = 0; i < 1; i++) {
+        // Inside that for loop check the COUNTFLAG bit in the CTRL (CSR)
+        // register in a loop. When that bit is set exit this inner loop
+        while ((systick->CSR & (1 << 16)) == 0) {
+            // do nothing
+        }
+    // to do another pass in the outer loop of 10.
     }
 }
+
+
+

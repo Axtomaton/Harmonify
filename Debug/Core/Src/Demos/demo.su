@@ -1,2 +1,2 @@
-../Core/Src/Demos/demo.c:31:13:demo_of_UART_print	56	static
-../Core/Src/Demos/demo.c:46:6:run_demo	16	static
+../Core/Src/Demos/demo.c:32:13:demo_of_UART_print	48	static
+../Core/Src/Demos/demo.c:52:6:run_demo	16	static
