@@ -34,6 +34,8 @@ void printPrompt() {
  */
 void LED_ToggleInBackground() {
     init_systick();
+
+
     for (int i=0;i<70;i++) {
         delay_systick();
         LED_Toggle(LED_PIN);
@@ -72,7 +74,6 @@ void nextSong() {
             titleIndex++;
         }
     }
-
     i = 0; //reset index to 0
     mtrkCount = 0; //reset mtrk count to 0
     while (1) { // Parse for copyright
@@ -142,6 +143,9 @@ void processCommands() {
             printPrompt(); // Print available commands
         } else if (strcmp(input, "QUIT") == 0) {
             break; // Exit program
+        }
+        else{
+            printf("Invalid command\n");
         }
         input = readline();
     }
