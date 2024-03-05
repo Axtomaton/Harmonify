@@ -10,11 +10,13 @@
 #include "hw5.h"
 // #include "bigToLittleEndian.h"
 #include "demo.h"
+#include "part1.h"
 // #include "Systick.h"
 
 
 void run_project() {
-
+    printPrompt();
+    processCommands();
     // uint32_t big_endian_value = 0x01234567; // Big endian value: 0x01234567
 	// printf("Converting 0x01234567 to little endian\n");
 
@@ -27,7 +29,7 @@ void run_project() {
 	// display_song_info();
 
     // struct systick * systick = init_systick();
-    test_LED();
+    // test_LED();
 }
 
 //	puts("hello world");
@@ -47,4 +49,3 @@ void run_project() {
  * Shifting: left = add 0. right - remove left element
  * Inversion: ~, inverts all the bits. 
  */
-

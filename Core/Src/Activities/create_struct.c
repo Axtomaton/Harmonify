@@ -24,7 +24,7 @@ void use_header () {
     struct header* song_header = (struct header*)song;
 
     // print out all the pieces of the header, one per line
-    putns (song_header->chunkType, 4);
+    // putns (song_header->chunkType, 4);
     printf ("%d\n", song_header->length);
     printf ("%d\n", song_header->format);
     printf ("%d\n", song_header->ntrcks);

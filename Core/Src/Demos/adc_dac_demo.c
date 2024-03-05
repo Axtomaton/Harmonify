@@ -8,7 +8,7 @@
 #include "adc.h"
 #include "dac.h"
 #include "adc_demo.h"
-
+#include "Systick.h"
 uint8_t one_second_elapsed = FALSE;
 uint32_t counter = 0;
 

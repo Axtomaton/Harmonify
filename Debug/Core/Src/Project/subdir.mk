@@ -5,16 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/Project/part1.c \
 ../Core/Src/Project/project.c \
 ../Core/Src/Project/song.c \
 ../Core/Src/Project/tone.c 
 
 OBJS += \
+./Core/Src/Project/part1.o \
 ./Core/Src/Project/project.o \
 ./Core/Src/Project/song.o \
 ./Core/Src/Project/tone.o 
 
 C_DEPS += \
+./Core/Src/Project/part1.d \
 ./Core/Src/Project/project.d \
 ./Core/Src/Project/song.d \
 ./Core/Src/Project/tone.d 
@@ -27,7 +30,7 @@ Core/Src/Project/%.o Core/Src/Project/%.su Core/Src/Project/%.cyclo: ../Core/Src
 clean: clean-Core-2f-Src-2f-Project
 
 clean-Core-2f-Src-2f-Project:
-	-$(RM) ./Core/Src/Project/project.cyclo ./Core/Src/Project/project.d ./Core/Src/Project/project.o ./Core/Src/Project/project.su ./Core/Src/Project/song.cyclo ./Core/Src/Project/song.d ./Core/Src/Project/song.o ./Core/Src/Project/song.su ./Core/Src/Project/tone.cyclo ./Core/Src/Project/tone.d ./Core/Src/Project/tone.o ./Core/Src/Project/tone.su
+	-$(RM) ./Core/Src/Project/part1.cyclo ./Core/Src/Project/part1.d ./Core/Src/Project/part1.o ./Core/Src/Project/part1.su ./Core/Src/Project/project.cyclo ./Core/Src/Project/project.d ./Core/Src/Project/project.o ./Core/Src/Project/project.su ./Core/Src/Project/song.cyclo ./Core/Src/Project/song.d ./Core/Src/Project/song.o ./Core/Src/Project/song.su ./Core/Src/Project/tone.cyclo ./Core/Src/Project/tone.d ./Core/Src/Project/tone.o ./Core/Src/Project/tone.su
 
 .PHONY: clean-Core-2f-Src-2f-Project
 

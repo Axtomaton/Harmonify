@@ -12,7 +12,7 @@
 static char BUFFER [80];
 
 char read_and_echo_byte(){
-    uint8_t byte = USART_Read_Nonblocking(USART2); 
+    uint8_t byte = USART_Read(USART2); 
     putchar (byte);
     if (byte == '\r'){
         putchar('\n');
@@ -20,17 +20,27 @@ char read_and_echo_byte(){
     return byte;
 }
 
-char* readline(){
-    //user the Buffer to read one line of user input
-    char byte = ' ';
-    int i=0;
-    for (int i=0; (byte != '\r') && (i < sizeof(BUFFER) -1);i++){
+char* readline() {
+    char byte;
+    int i = 0;
+
+    while (1) {
         byte = read_and_echo_byte();
-        BUFFER [i] = byte;
+        if (byte == '\r') {
+            break;  // Exit the loop when newline is encountered
+        }
+        BUFFER[i++] = byte;
+        if (i >= sizeof(BUFFER) - 1) {
+            // Buffer overflow protection
+            BUFFER[i] = '\0';
+            return BUFFER;
+        }
     }
-    BUFFER[i-1] = 0;
+    BUFFER[i] = '\0';
+
     return BUFFER;
 }
+
 
 char readlines() {
     while (1){

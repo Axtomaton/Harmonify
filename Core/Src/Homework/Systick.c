@@ -16,30 +16,53 @@ struct systick* systick = (struct systick*) 0xE000E010; // Systick base address
  * 
  * @return struct systick* 
  */
-void init_systick() {
-    // Initialize systick
-    systick->CSR = 0; // Clear the CSR register
-    systick->RVR = 7999999; //set the reload value to 7999999
-    systick->CSR = (1 << 2); // Enable the counter to internal clock
-    systick->CSR != 1; // Enable the counter
+void init_systick()
+{
+    // Use the SysTick global structure pointer to do the following in this
+    // exact order with separate lines for each step:
+    //
+    // Disable SysTick by clearing the CTRL (CSR) register.
+    // Set the LOAD (RVR) to 8 million to give us a 100 milliseconds timer.
+    // Set the clock source bit in the CTRL (CSR) to the internal clock.
+    // Set the enable bit in the CTRL (CSR) to start the timer.
+
+    //clear csr register
+
+    // SysTick->CSR &= ~(1 << 0);
+
+    systick->CSR = 0;
+
+    //set timer to 10 ms
+    systick->RVR = 7999999;
+
+    //set to internal clock
+    systick->CSR = (1 << 2);
+
+    //start timer
+    systick->CSR |= 1;
+
 }
 
-/**
- * @brief This function is to create a delay by consuming CPU cycle on counter
- */
 // This fuction is to create delay using SysTick timer counter
-void delay_systick() {
+void delay_systick()
+{
     // Using the SysTick global structure pointer do the following:
     // Create a for loop that loops 10 times
-    for (int i = 0; i < 1; i++) {
-        // Inside that for loop check the COUNTFLAG bit in the CTRL (CSR)
-        // register in a loop. When that bit is set exit this inner loop
-        while ((systick->CSR & (1 << 16)) == 0) {
-            // do nothing
-        }
+    // Inside that for loop check the COUNTFLAG bit in the CTRL (CSR)
+    // register in a loop. When that bit is set exit this inner loop
     // to do another pass in the outer loop of 10.
+
+
+
+    for( int count=0; count <1; count++){
+
+        while (!(systick->CSR & (1 << 16)));
+        // while(x == 0){
+        //     if ((SysTick->CSR >> 16) == 1) {
+        //          x = 1;
+        //     }
+        // }
     }
+
+
 }
-
-
-

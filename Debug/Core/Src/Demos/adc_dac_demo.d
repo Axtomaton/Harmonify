@@ -30,7 +30,8 @@ Core/Src/Demos/adc_dac_demo.o: ../Core/Src/Demos/adc_dac_demo.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
  /Users/ivanl/SWEN340/Core/Inc/Devices/dac.h \
- /Users/ivanl/SWEN340/Core/Inc/Demos/adc_demo.h
+ /Users/ivanl/SWEN340/Core/Inc/Demos/adc_demo.h \
+ /Users/ivanl/SWEN340/Core/Inc/Homework/Systick.h
 /Users/ivanl/SWEN340/Core/Inc/Devices/adc.h:
 ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:
@@ -63,3 +64,4 @@ Core/Src/Demos/adc_dac_demo.o: ../Core/Src/Demos/adc_dac_demo.c \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
 /Users/ivanl/SWEN340/Core/Inc/Devices/dac.h:
 /Users/ivanl/SWEN340/Core/Inc/Demos/adc_demo.h:
+/Users/ivanl/SWEN340/Core/Inc/Homework/Systick.h:

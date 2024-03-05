@@ -1,4 +1,4 @@
 ../Core/Src/Activities/Activity_8.c:14:6:read_and_echo_byte	2
 ../Core/Src/Activities/Activity_8.c:23:7:readline	3
-../Core/Src/Activities/Activity_8.c:35:6:readlines	1
-../Core/Src/Activities/Activity_8.c:42:6:read_bytes	1
+../Core/Src/Activities/Activity_8.c:45:6:readlines	1
+../Core/Src/Activities/Activity_8.c:52:6:read_bytes	1

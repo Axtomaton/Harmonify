@@ -3,7 +3,7 @@
 
 #include "stm32l476xx.h"
 
-#define LED_PIN 5
+#define LED_PIN 7
 
 void LED_Init(int pin);
 void LED_Off(int pin);

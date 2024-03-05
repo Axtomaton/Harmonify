@@ -13,6 +13,7 @@
 "./Core/Src/Homework/bigToLittleEndian.o"
 "./Core/Src/Homework/hw5.o"
 "./Core/Src/Homework/printf.o"
+"./Core/Src/Project/part1.o"
 "./Core/Src/Project/project.o"
 "./Core/Src/Project/song.o"
 "./Core/Src/Project/tone.o"

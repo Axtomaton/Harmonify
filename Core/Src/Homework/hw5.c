@@ -13,19 +13,27 @@
 #include "printf.h"
 #include "Activity_8.h"
 
-
 /**
  * @brief This function runs the test for the LED and UART. 
  * It toggles the LED and echos the user input through USART_Read_Nonblocking
  */
 void test_LED(){
-    init_systick(); // Initialize SysTick for delay
-    while(1) {
-        LED_Toggle(LED_PIN); // Toggle LED pin
-        char ch = read_and_echo_byte(); //check for user input
-        if(ch != 0) { //if there is a character
-            printf("%c\n", ch); // Echo received character
+    init_systick(); // Initialize the systick
+
+    int count = 0;
+    while(1){
+
+        uint8_t byte = USART_Read_Nonblocking(USART2); // read character and echo
+
+        if (byte != 0){ // make sure valid character
+            putchar (byte);// echo output
         }
-        delay_systick(); //delays the next iteration once per scond. Makes input super slow. 
+        // delay
+        delay_systick(); 
+        count ++;
+        if (count == 10){
+            LED_Toggle(LED_PIN); // toggle led
+            count = 0;
+        }
     }
 }

@@ -25,13 +25,13 @@
 // 		;
 // }
 
-static struct systick* systick;
+// static struct systick* systick;
 static int count = 0;
 
 // This function is to print counter on UART port and toggle LED
 static void demo_of_UART_print(int counter){
-	int n ;
-	uint8_t buffer[BUFFER_SIZE];
+	// int n ;
+	// uint8_t buffer[BUFFER_SIZE];
 
 	// n = sprintf((char *)buffer, "counter = %d\r\n", counter);
 	// USART_Write(USART2, buffer, n);
