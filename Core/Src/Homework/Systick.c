@@ -37,7 +37,6 @@ void init_systick()
 
     //set to internal clock
     systick->CSR = (1 << 2);
-
     //start timer
     systick->CSR |= 1;
 

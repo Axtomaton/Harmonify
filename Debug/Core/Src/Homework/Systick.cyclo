@@ -1,2 +1,2 @@
 ../Core/Src/Homework/Systick.c:19:6:init_systick	1
-../Core/Src/Homework/Systick.c:47:6:delay_systick	3
+../Core/Src/Homework/Systick.c:46:6:delay_systick	3

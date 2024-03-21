@@ -11,7 +11,7 @@
 #include "project.h"
 #include "printf.h"
 #include <stdio.h>
-
+#include "Activity_11.h"
 
 
 
@@ -21,7 +21,9 @@ int main(void){
 	System_Clock_Init(); // set System Clock = 80 MHz
 	LED_Init(LED_PIN);
 	UART2_Init();
-	run_project();
+	blue_button_check();
+	// run_project();
+	activity_11();
 
 //	 print_systick();
 	// use_header();
