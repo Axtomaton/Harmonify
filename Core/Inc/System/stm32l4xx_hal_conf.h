@@ -22,6 +22,7 @@
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef STM32L4xx_HAL_CONF_H
 #define STM32L4xx_HAL_CONF_H
+#include "stm32l4xx.h"
 
 #ifdef __cplusplus
  extern "C" {
@@ -481,3 +482,11 @@
 #endif /* STM32L4xx_HAL_CONF_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+
+void HAL_GPIO_EXTI_IRQHandhler(uint16_t GPIO_Pin){
+    if (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN != 0X00u)){
+        __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN);
+        HAL_GPIO_EXTI_Callback(GPIO_PIN);
+    }
+}

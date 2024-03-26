@@ -30,16 +30,11 @@ void init_systick()
 
     // SysTick->CSR &= ~(1 << 0);
 
-    systick->CSR = 0;
-
-    //set timer to 10 ms
-    systick->RVR = 7999999;
-
-    //set to internal clock
+    systick->CSR = 0; // Clear CSR
+    systick->RVR = 7999999; // Set to 10 ms
     systick->CSR = (1 << 2);
-    //start timer
-    systick->CSR |= 1;
-
+    systick->CSR !=1;
+    systick->CSR != (1 << 1);
 }
 
 // This fuction is to create delay using SysTick timer counter
