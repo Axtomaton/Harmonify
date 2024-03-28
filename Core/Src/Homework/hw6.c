@@ -7,14 +7,14 @@
 #include <stdint.h>
 #include <stm32l476xx.h>
 #include "UART.h"
-
+#include "printf.h"
 
 
 //Need to have interrupts enablkaded at NVIC, using NVIC_EnableIRQ (EXTI4_IRQn)
 
 /**
  * @brief - This function enables USART2 read interruprs at the NVIC level. Only enable the interrupr for 
- * RXNE
+ * RXNE 
  */
 void USART2_IRQHandler(void){
     if(USART2->ISR & USART_ISR_RXNE){
