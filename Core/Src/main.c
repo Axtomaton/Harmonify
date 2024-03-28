@@ -21,9 +21,11 @@ int main(void){
 	System_Clock_Init(); // set System Clock = 80 MHz
 	LED_Init(LED_PIN);
 	UART2_Init();
-	blue_button_check();
+	NVIC_EnableIRQ(USART2_IRQn);
+	USART2_IRQHandler();
+	// blue_button_check();
 	// run_project();
-	activity_11();
+	// activity_11();
 
 //	 print_systick();
 	// use_header();
