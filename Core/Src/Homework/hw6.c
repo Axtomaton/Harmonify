@@ -17,10 +17,10 @@
  * RXNE
  */
 void USART2_IRQHandler(void){
-    //Check if the interrupt is for RXNE
-    if(USART2->ISR & (1 << 5)){
-        uint8_t data = USART2->RDR;
-        USART_Write(USART2, &data, 1);
+    if(USART2->ISR & USART_ISR_RXNE){
+        uint8_t data = USART_Read(USART2);
+        printf("%c", data);
+        // USART_Write(USART2, &data, 1);
     }
 
 }
