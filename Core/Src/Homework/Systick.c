@@ -30,14 +30,14 @@ void init_systick()
 
     // SysTick->CSR &= ~(1 << 0);
 
-    systick->CSR = 0; // Clear CSR
-    systick->RVR = 7999999; // Set to 10 ms
-    systick->CSR = (1 << 2);
-    systick->CSR !=1;
-    systick->CSR != (1 << 1);
+    // systick->CSR = 0; // Clear CSR
+    systick->RVR = 79; // Set to 10 ms
+    systick->CSR = systick->CSR | (1<<2);
+    systick->CSR = systick->CSR | (1 << 1);
+    systick->CSR = systick->CSR | (1 << 0);
 }
 
-// This fuction is to create delay using SysTick timer counter
+// This fucion is to create delay using SysTick timer counter
 void delay_systick()
 {
     // Using the SysTick global structure pointer do the following:
@@ -46,17 +46,10 @@ void delay_systick()
     // register in a loop. When that bit is set exit this inner loop
     // to do another pass in the outer loop of 10.
 
-
-
-    for( int count=0; count <1; count++){
-
         while (!(systick->CSR & (1 << 16)));
         // while(x == 0){
         //     if ((SysTick->CSR >> 16) == 1) {
         //          x = 1;
         //     }
         // }
-    }
-
-
 }

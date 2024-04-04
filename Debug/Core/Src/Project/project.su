@@ -1,1 +1,8 @@
-../Core/Src/Project/project.c:17:6:run_project	8	static
+../Core/Src/Project/project.c:43:6:EXTI15_10_IRQHandler	8	static
+../Core/Src/Project/project.c:54:6:EXTI9_5_IRQHandler	16	static
+../Core/Src/Project/project.c:72:6:printPrompt	8	static
+../Core/Src/Project/project.c:86:6:playSong	8	static
+../Core/Src/Project/project.c:93:6:nextSong	24	static
+../Core/Src/Project/project.c:104:6:stopSong	8	static
+../Core/Src/Project/project.c:113:6:led_toggler	16	static
+../Core/Src/Project/project.c:123:6:run_project	152	static

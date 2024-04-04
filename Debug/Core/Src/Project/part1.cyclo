@@ -1,4 +1,2 @@
-../Core/Src/Project/part1.c:21:6:printPrompt	1
-../Core/Src/Project/part1.c:35:6:LED_ToggleInBackground	2
-../Core/Src/Project/part1.c:49:6:nextSong	26
-../Core/Src/Project/part1.c:129:6:processCommands	7
+../Core/Src/Project/part1.c:30:6:next_song	2
+../Core/Src/Project/part1.c:38:6:pause_song	2

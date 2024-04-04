@@ -1,1 +1,8 @@
-../Core/Src/Project/project.c:17:6:run_project	1
+../Core/Src/Project/project.c:43:6:EXTI15_10_IRQHandler	2
+../Core/Src/Project/project.c:54:6:EXTI9_5_IRQHandler	4
+../Core/Src/Project/project.c:72:6:printPrompt	1
+../Core/Src/Project/project.c:86:6:playSong	1
+../Core/Src/Project/project.c:93:6:nextSong	2
+../Core/Src/Project/project.c:104:6:stopSong	1
+../Core/Src/Project/project.c:113:6:led_toggler	2
+../Core/Src/Project/project.c:123:6:run_project	21

@@ -7,6 +7,7 @@
 C_SRCS += \
 ../Core/Src/Activities/Activity_10.c \
 ../Core/Src/Activities/Activity_11.c \
+../Core/Src/Activities/Activity_12.c \
 ../Core/Src/Activities/Activity_8.c \
 ../Core/Src/Activities/create_struct.c \
 ../Core/Src/Activities/hello_world.c \
@@ -15,6 +16,7 @@ C_SRCS += \
 OBJS += \
 ./Core/Src/Activities/Activity_10.o \
 ./Core/Src/Activities/Activity_11.o \
+./Core/Src/Activities/Activity_12.o \
 ./Core/Src/Activities/Activity_8.o \
 ./Core/Src/Activities/create_struct.o \
 ./Core/Src/Activities/hello_world.o \
@@ -23,6 +25,7 @@ OBJS += \
 C_DEPS += \
 ./Core/Src/Activities/Activity_10.d \
 ./Core/Src/Activities/Activity_11.d \
+./Core/Src/Activities/Activity_12.d \
 ./Core/Src/Activities/Activity_8.d \
 ./Core/Src/Activities/create_struct.d \
 ./Core/Src/Activities/hello_world.d \
@@ -36,7 +39,7 @@ Core/Src/Activities/%.o Core/Src/Activities/%.su Core/Src/Activities/%.cyclo: ..
 clean: clean-Core-2f-Src-2f-Activities
 
 clean-Core-2f-Src-2f-Activities:
-	-$(RM) ./Core/Src/Activities/Activity_10.cyclo ./Core/Src/Activities/Activity_10.d ./Core/Src/Activities/Activity_10.o ./Core/Src/Activities/Activity_10.su ./Core/Src/Activities/Activity_11.cyclo ./Core/Src/Activities/Activity_11.d ./Core/Src/Activities/Activity_11.o ./Core/Src/Activities/Activity_11.su ./Core/Src/Activities/Activity_8.cyclo ./Core/Src/Activities/Activity_8.d ./Core/Src/Activities/Activity_8.o ./Core/Src/Activities/Activity_8.su ./Core/Src/Activities/create_struct.cyclo ./Core/Src/Activities/create_struct.d ./Core/Src/Activities/create_struct.o ./Core/Src/Activities/create_struct.su ./Core/Src/Activities/hello_world.cyclo ./Core/Src/Activities/hello_world.d ./Core/Src/Activities/hello_world.o ./Core/Src/Activities/hello_world.su ./Core/Src/Activities/timer.cyclo ./Core/Src/Activities/timer.d ./Core/Src/Activities/timer.o ./Core/Src/Activities/timer.su
+	-$(RM) ./Core/Src/Activities/Activity_10.cyclo ./Core/Src/Activities/Activity_10.d ./Core/Src/Activities/Activity_10.o ./Core/Src/Activities/Activity_10.su ./Core/Src/Activities/Activity_11.cyclo ./Core/Src/Activities/Activity_11.d ./Core/Src/Activities/Activity_11.o ./Core/Src/Activities/Activity_11.su ./Core/Src/Activities/Activity_12.cyclo ./Core/Src/Activities/Activity_12.d ./Core/Src/Activities/Activity_12.o ./Core/Src/Activities/Activity_12.su ./Core/Src/Activities/Activity_8.cyclo ./Core/Src/Activities/Activity_8.d ./Core/Src/Activities/Activity_8.o ./Core/Src/Activities/Activity_8.su ./Core/Src/Activities/create_struct.cyclo ./Core/Src/Activities/create_struct.d ./Core/Src/Activities/create_struct.o ./Core/Src/Activities/create_struct.su ./Core/Src/Activities/hello_world.cyclo ./Core/Src/Activities/hello_world.d ./Core/Src/Activities/hello_world.o ./Core/Src/Activities/hello_world.su ./Core/Src/Activities/timer.cyclo ./Core/Src/Activities/timer.d ./Core/Src/Activities/timer.o ./Core/Src/Activities/timer.su
 
 .PHONY: clean-Core-2f-Src-2f-Activities
 

@@ -41,9 +41,11 @@ void GPIO_Init(void)
 	/* EXTI15_10_IRQn interrupt init*/
 	// Note you will have to add EXTI15_10_IRQn Interrupt handler function as well
 	// This is the interrupt handler for the blue button
+	NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 
 	/* EXTI9_5_IRQn interrupt init*/
 	// Note you will have to add EXTI9_15_IRQn Interrupt handler function as well
 	// This is the interrupt handler for the external buttons (S1)
+	NVIC_EnableIRQ(EXTI9_5_IRQn);
 }

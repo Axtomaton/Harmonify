@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "stm32l476xx.h": "c",
-        "uart.h": "c"
+        "uart.h": "c",
+        "stm32l4xx_hal.h": "c",
+        "__bit_reference": "c",
+        "bitset": "c",
+        "unordered_map": "c"
     }
 }

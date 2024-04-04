@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-static char buffer[80];
+static char buffer[128];
 
 int puts (const char* str) {
     int ret = sprintf (buffer, "%s\r\n", str);

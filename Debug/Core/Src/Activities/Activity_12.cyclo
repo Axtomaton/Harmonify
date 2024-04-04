@@ -1,0 +1,3 @@
+../Drivers/CMSIS/Include/core_cm4.h:1679:22:__NVIC_EnableIRQ	2
+../Core/Src/Activities/Activity_12.c:13:6:setup	1
+../Core/Src/Activities/Activity_12.c:18:6:EXTI_15_10_IRQHandler	1
