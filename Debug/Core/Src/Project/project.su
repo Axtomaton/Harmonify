@@ -1,8 +1,8 @@
-../Core/Src/Project/project.c:43:6:EXTI15_10_IRQHandler	8	static
-../Core/Src/Project/project.c:54:6:EXTI9_5_IRQHandler	16	static
-../Core/Src/Project/project.c:72:6:printPrompt	8	static
-../Core/Src/Project/project.c:86:6:playSong	8	static
-../Core/Src/Project/project.c:93:6:nextSong	24	static
-../Core/Src/Project/project.c:104:6:stopSong	8	static
-../Core/Src/Project/project.c:113:6:led_toggler	16	static
-../Core/Src/Project/project.c:123:6:run_project	152	static
+../Core/Src/Project/project.c:36:6:EXTI15_10_IRQHandler	8	static
+../Core/Src/Project/project.c:47:6:EXTI9_5_IRQHandler	16	static
+../Core/Src/Project/project.c:65:6:printPrompt	8	static
+../Core/Src/Project/project.c:79:6:playSong	8	static
+../Core/Src/Project/project.c:86:6:nextSong	24	static
+../Core/Src/Project/project.c:97:6:stopSong	8	static
+../Core/Src/Project/project.c:105:6:led_toggler	16	static
+../Core/Src/Project/project.c:115:6:run_project	152	static

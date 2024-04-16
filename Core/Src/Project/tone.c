@@ -44,7 +44,7 @@ uint32_t get_tick_speed ();
 
 
 // Convert from hertz to ticks
-uint32_t hertz_to_midi_ticks (float hertz) {
+uint32_t hertz_to_midi_ticks (float hertz) { //pass in frequency and it return the number of midi ticks
 	float ticks_per_second = CPU_SPEED / (SysTick->LOAD + 1);
 	if (hertz == 0)
 		return 0;
@@ -74,7 +74,8 @@ uint8_t remove_tone (uint8_t note) {
 	return 0;
 }
 
-// Play any tones in the array
+// Play any tones in the array. 1. calculate how long notes plays for (dont do), 1. event start playing until diff event tells u to stop. 
+// Play called repeateded as fast as you can, something else worries about changing the note. 
 void play_tones () {
 
 }

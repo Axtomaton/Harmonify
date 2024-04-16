@@ -12,6 +12,11 @@
 // Handle interruprs
 static int count = 0;
 
+int get_time(){
+    return count;
+}
+
+
 void SysTick_Handler(){ //hardware runs it for you. m
     count++;
 }

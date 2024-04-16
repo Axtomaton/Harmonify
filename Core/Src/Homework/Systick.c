@@ -31,7 +31,7 @@ void init_systick()
     // SysTick->CSR &= ~(1 << 0);
 
     // systick->CSR = 0; // Clear CSR
-    systick->RVR = 79; // Set to 10 ms
+    systick->RVR = 79999999; // Set to 10 ms
     systick->CSR = systick->CSR | (1<<2);
     systick->CSR = systick->CSR | (1 << 1);
     systick->CSR = systick->CSR | (1 << 0);

@@ -3,4 +3,4 @@
 ../Core/Src/Project/tone.c:60:6:reset_counter	4	static
 ../Core/Src/Project/tone.c:65:9:add_tone	24	static
 ../Core/Src/Project/tone.c:71:9:remove_tone	16	static
-../Core/Src/Project/tone.c:78:6:play_tones	4	static
+../Core/Src/Project/tone.c:79:6:play_tones	4	static
